@@ -1,0 +1,6 @@
+
+# cat ./bash_aliases >> ~/.bash_aliases && source ~/.bashrc
+#
+alias esp32c3='source z_esp32c3.sh'
+alias esp32s2='source z_esp32s2.sh'
+alias esp32='source z_esp32.sh'

@@ -1,0 +1,15 @@
+robertbc@vm-base:~/esp32app$ source z_esp32.sh
+Now developing for esp32 SOC
+(.venv) robertbc@vm-base:~/esp32app$ west init -m https://github.com/zephyrproject-rtos/example-application --mr main my-workspace
+=== Initializing in /home/robertbc/esp32app/my-workspace
+--- Cloning manifest repository from https://github.com/zephyrproject-rtos/example-application, rev. main
+Cloning into '/home/robertbc/esp32app/my-workspace/.west/manifest-tmp'...
+remote: Enumerating objects: 116, done.
+remote: Counting objects: 100% (65/65), done.
+remote: Compressing objects: 100% (45/45), done.
+remote: Total 116 (delta 23), reused 31 (delta 17), pack-reused 51
+Receiving objects: 100% (116/116), 25.88 KiB | 2.16 MiB/s, done.
+Resolving deltas: 100% (30/30), done.
+--- setting manifest.path to example-application
+=== Initialized. Now run "west update" inside /home/robertbc/esp32app/my-workspace.
+(.venv) robertbc@vm-base:~/esp32app$

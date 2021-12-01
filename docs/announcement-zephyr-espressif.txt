@@ -1,0 +1,33 @@
+﻿Espressif ESP32 development setup script and tutorial.
+
+A Zephyr RTOS & Espressif ESP32 SOC Development Environment: Linux setup script and tutorial.
+
+git clone https://github.com/Burtrum/scripts-zephyr
+
+This single script installs ALL of the tools needed to go from "plug in the USB cable to flash the ESP32 board" in under 10 minutes.
+The detailed README.md demonstrates step-by-step Zephyr workflow from configure and compile to flash and monitor.
+
+I have Linux Zephyr development for the ESP32 working now for a couple of days.
+I use a Python Virtual Environment to minimize Python issues and switch development easily between: esp32, esp32c3, esp32s2.
+
+Successfully built the Zephyr "hello_world" for Espressif SOC: Xtensa 32-bit esp32, esp32s2. and RISC-V 32-bit esp32c3,
+Flashed "hello_world" to esp32 board and serial monitor works.
+No esp32c3 board available.
+The esp32s2_saola board worked (I think) until I accidentally tried to flash it with esp32c3 "zephyr.bin" image. Now shows checksum errors on boot.
+
+
+I currently develop HW/SW for the awesome Espressif ESP32 SOCs with their ESP-IDF/freeRTOS framework. Recommend it.
+So when Espressif announced Zephyr support I decided to target a Zephyr ESP32 setup next.
+I know I will spend hours of my life chasing endless details to get it all to work.
+And for me that starts with writing installation scripts.
+
+I really want Zephyr and Espressif integration to move quickly,
+So this script is my first contribution to the Open-Source effort.
+
+Zephyr with Espressif ESP32, RISC-V, Linux ... $10 boards and $15 logic analyzers!
+It's all about the tools. I can't wait.
+
+Burtrum
+
+
+EOF

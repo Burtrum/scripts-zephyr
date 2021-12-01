@@ -1,0 +1,39 @@
+(.venv)$ west debug
+
+-- west debug: rebuilding
+ninja: no work to do.
+-- west debug: using runner openocd
+-- runners.openocd: OpenOCD GDB server running on port 3333; no thread info available
+Open On-Chip Debugger  v0.10.0-esp32-20200709 (2020-07-09-08:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : Configured 1 cores
+Info : Listening on port 6333 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Error: no device found
+Error: unable to open ftdi device with vid 0403, pid 6010, description '*', serial '*' at bus location '*'
+Error: no device found
+Error: unable to open ftdi device with vid 0403, pid 6014, description '*', serial '*' at bus location '*'
+
+openocd: src/jtag/core.c:343: jtag_checks: Assertion `jtag_trst == 0' failed.
+GNU gdb (crosstool-NG esp-2020r3) 8.1.0.20180627-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "--host=x86_64-build_pc-linux-gnu --target=xtensa-esp32-elf".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from /home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/zephyr.elf...done.
+:3333: Connection timed out.
+Register cache flushed.
+"monitor" command not supported by this target.
+No hardware breakpoint support in the target.
+(gdb)

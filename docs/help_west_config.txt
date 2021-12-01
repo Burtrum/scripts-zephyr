@@ -1,0 +1,72 @@
+usage: west config [-h] [-l] [-d] [-D] [--system] [--global] [--local]
+                   [name] [value]
+
+West configuration file handling.
+
+West follows Git-like conventions for configuration file locations.
+There are three types of configuration file: system-wide files apply
+to all users on the current machine, global files apply to the current
+user, and local files apply to the current west workspace.
+
+System files:
+
+- Linux: /etc/westconfig
+- macOS: /usr/local/etc/westconfig
+- Windows: %PROGRAMDATA%\west\config
+
+Global files:
+
+- Linux: ~/.westconfig or (if $XDG_CONFIG_HOME is set)
+  $XDG_CONFIG_HOME/west/config
+- macOS: ~/.westconfig
+- Windows: .westconfig in the user's home directory, as determined
+  by os.path.expanduser.
+
+Local files:
+
+- Linux, macOS, Windows: <workspace-root-directory>/.west/config
+
+You can override these files' locations with the WEST_CONFIG_SYSTEM,
+WEST_CONFIG_GLOBAL, and WEST_CONFIG_LOCAL environment variables.
+
+Configuration values from later configuration files override configuration
+from earlier ones. Local values have highest precedence, and system values
+lowest.
+
+To get a value for <name>, type:
+    west config <name>
+
+To set a value for <name>, type:
+    west config <name> <value>
+
+To list all options and their values:
+    west config -l
+
+To delete <name> in the local or global file (wherever it's set
+first, not in both; if set locally, global values become visible):
+    west config -d <name>
+
+To delete <name> in the global file only:
+    west config -d --global <name>
+
+To delete <name> everywhere it's set, including the system file:
+    west config -D <name>
+
+positional arguments:
+  name              config option in section.key format; e.g. "foo.bar" is
+                    section "foo", key "bar"
+  value             value to set "name" to
+
+optional arguments:
+  -h, --help        show this help message and exit
+  -l, --list        list all options and their values
+  -d, --delete      delete an option in one config file
+  -D, --delete-all  delete an option everywhere it's set
+
+configuration file to use (give at most one):
+  --system          system-wide file
+  --global          global (user-wide) file
+  --local           this workspace's file
+
+If the configuration file to use is not set, reads use all three in
+precedence order, and writes use the local file.

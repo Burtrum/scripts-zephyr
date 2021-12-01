@@ -1,0 +1,13 @@
+usage: west zephyr-export [-h]
+
+This command registers the current Zephyr installation as a CMake
+config package in the CMake user package registry.
+
+In Windows, the CMake user package registry is found in:
+HKEY_CURRENT_USER\Software\Kitware\CMake\Packages\
+
+In Linux and MacOS, the CMake user package registry is found in:
+~/.cmake/packages/
+
+optional arguments:
+  -h, --help  show this help message and exit

@@ -1,0 +1,141 @@
+(.venv)$ west build --pristine auto
+
+[1/166] Preparing syscall dependency handling
+
+[149/166] Performing configure step for 'EspIdfBootloader'
+-- Found Git: /usr/bin/git (found version "2.25.1")
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/robertbc/.espressif/tools/zephyr/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/robertbc/.espressif/tools/zephyr/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/robertbc/.espressif/tools/zephyr/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/robertbc/zephyrproject/zephyr/samples/hello_world/build/esp-idf/build/sdkconfig
+-- Adding linker script /home/robertbc/zephyrproject/modules/hal/espressif/components/esp32/ld/esp32.peripherals.ld
+-- Adding linker script /home/robertbc/zephyrproject/modules/hal/espressif/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/robertbc/zephyrproject/modules/hal/espressif/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/robertbc/zephyrproject/modules/hal/espressif/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/robertbc/zephyrproject/modules/hal/espressif/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/robertbc/zephyrproject/modules/hal/espressif/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script /home/robertbc/zephyrproject/modules/hal/espressif/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp32 esp_common esp_hw_support esp_rom esp_system esptool_py hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: /home/robertbc/zephyrproject/modules/hal/espressif/components/bootloader /home/robertbc/zephyrproject/modules/hal/espressif/components/bootloader_support /home/robertbc/zephyrproject/modules/hal/espressif/components/efuse /home/robertbc/zephyrproject/modules/hal/espressif/components/esp32 /home/robertbc/zephyrproject/modules/hal/espressif/components/esp_common /home/robertbc/zephyrproject/modules/hal/espressif/components/esp_hw_support /home/robertbc/zephyrproject/modules/hal/espressif/components/esp_rom /home/robertbc/zephyrproject/modules/hal/espressif/components/esp_system /home/robertbc/zephyrproject/modules/hal/espressif/components/esptool_py /home/robertbc/zephyrproject/modules/hal/espressif/components/hal /home/robertbc/zephyrproject/modules/hal/espressif/components/log /home/robertbc/zephyrproject/modules/hal/espressif/components/bootloader/subproject/main /home/robertbc/zephyrproject/modules/hal/espressif/components/bootloader/subproject/components/micro-ecc /home/robertbc/zephyrproject/modules/hal/espressif/components/newlib /home/robertbc/zephyrproject/modules/hal/espressif/components/partition_table /home/robertbc/zephyrproject/modules/hal/espressif/components/soc /home/robertbc/zephyrproject/modules/hal/espressif/components/spi_flash /home/robertbc/zephyrproject/modules/hal/espressif/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/robertbc/zephyrproject/zephyr/samples/hello_world/build/esp-idf/build/bootloader
+[150/166] Performing build step for 'EspIdfBootloader'
+[1/85] Generating project_elf_src_esp32.c
+[2/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/soc_include_legacy_warn.c.obj
+[3/85] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj
+[4/85] Building C object CMakeFiles/bootloader.elf.dir/project_elf_src_esp32.c.obj
+[5/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
+[6/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/memory_layout_utils.c.obj
+[7/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/adc_periph.c.obj
+[8/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dac_periph.c.obj
+[9/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj
+[10/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2s_periph.c.obj
+[11/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2c_periph.c.obj
+[12/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/interrupts.c.obj
+[13/85] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj
+[14/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/ledc_periph.c.obj
+[15/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/pcnt_periph.c.obj
+[16/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rmt_periph.c.obj
+[17/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.obj
+[18/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_io_periph.c.obj
+[19/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sigmadelta_periph.c.obj
+[20/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/soc_memory_layout.c.obj
+[21/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.obj
+[22/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj
+[23/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/timer_periph.c.obj
+[24/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/uart_periph.c.obj
+[25/85] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/touch_sensor_periph.c.obj
+[26/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
+[27/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
+[28/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config_esp32.c.obj
+[29/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
+[30/85] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp32/spi_flash_rom_patch.c.obj
+[31/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj
+[32/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
+[33/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
+[34/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
+[35/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32.c.obj
+[36/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+[37/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
+[38/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj
+[39/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
+[40/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj
+[41/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32.c.obj
+[42/85] Building C object esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj
+[43/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj
+[44/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
+[45/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj
+[46/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj
+[47/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj
+[48/85] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_table.c.obj
+[49/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_sha.c.obj
+[50/85] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_fields.c.obj
+[51/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/flash_encrypt.c.obj
+[52/85] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_api.c.obj
+[53/85] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_esp32.c.obj
+[54/85] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_utility.c.obj
+[55/85] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj
+[56/85] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj
+[57/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.obj
+[58/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.obj
+[59/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_pm.c.obj
+[60/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.obj
+[61/85] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj
+[62/85] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
+[63/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.obj
+[64/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.obj
+[65/85] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
+[66/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.obj
+[67/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_wdt.c.obj
+[68/85] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj
+[69/85] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.obj
+[70/85] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj
+[71/85] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj
+[72/85] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj
+[73/85] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
+[74/85] Linking C static library esp-idf/log/liblog.a
+[75/85] Linking C static library esp-idf/esp_rom/libesp_rom.a
+[76/85] Linking C static library esp-idf/esp_hw_support/libesp_hw_support.a
+[77/85] Linking C static library esp-idf/efuse/libefuse.a
+[78/85] Linking C static library esp-idf/bootloader_support/libbootloader_support.a
+[79/85] Linking C static library esp-idf/spi_flash/libspi_flash.a
+[80/85] Linking C static library esp-idf/micro-ecc/libmicro-ecc.a
+[81/85] Linking C static library esp-idf/soc/libsoc.a
+[82/85] Linking C static library esp-idf/hal/libhal.a
+[83/85] Linking C static library esp-idf/main/libmain.a
+[84/85] Linking C executable bootloader.elf
+[85/85] Generating binary image from built executable
+esptool.py v3.1-dev
+Merged 1 ELF section
+Generated /home/robertbc/zephyrproject/zephyr/samples/hello_world/build/esp-idf/build/bootloader/bootloader.bin
+[156/166] Linking C executable zephyr/zephyr_pre0.elf
+
+[160/166] Linking C executable zephyr/zephyr_pre1.elf
+
+[166/166] Linking C executable zephyr/zephyr.elf
+Memory region         Used Size  Region Size  %age Used
+     iram0_0_seg:       12424 B       128 KB      9.48%
+     irom0_0_seg:       12995 B    3342304 B      0.39%
+     dram0_0_seg:        1584 B     180736 B      0.88%
+     dram0_1_seg:         53 KB     113840 B     47.67%
+     drom0_0_seg:        2428 B    4194272 B      0.06%
+    rtc_iram_seg:          0 GB         8 KB      0.00%
+    rtc_slow_seg:          0 GB         4 KB      0.00%
+        IDT_LIST:          0 GB         8 KB      0.00%
+esptool.py v3.1-dev
+Merged 5 ELF sections
+
+(.venv)$

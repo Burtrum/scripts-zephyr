@@ -1,0 +1,32 @@
+Last script output.
+
+$ cat console_log.txt | grep -i error
+ERROR: sphinx 3.5.4 has requirement docutils<0.17,>=0.12, but you'll have docutils 0.18.1 which is incompatible.
+ERROR: sphinx-rtd-theme 0.5.2 has requirement docutils<0.17, but you'll have docutils 0.18.1 which is incompatible.
+ERROR: sphinx-tabs 3.2.0 has requirement docutils~=0.16.0, but you'll have docutils 0.18.1 which is incompatible.
+
+$ cat console_log.txt | grep -i warn
+$
+
+===========================================
+ISSUE 1: KNOWN ISSUE: gdb depends on `python2.7`
+Error On `west build`
+-- Found toolchain: espressif (/home/robertbc/.espressif/tools/zephyr)
+/home/robertbc/.espressif/tools/zephyr/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb:
+error while loading shared libraries: libpython2.7.so.1.0: cannot open shared object file: No such file or directory
+
+FIX 1: Install Python2.7
+    sudo apt-get --quite --yes --no-install-recommends python2.7-dev
+
+See open issue: https://github.com/zephyrproject-rtos/zephyr/issues/39212
+See pull req: https://github.com/zephyrproject-rtos/zephyr/pull/38749
+See pull req: https://github.com/zephyrproject-rtos/zephyr/pull/38557
+
+===========================================
+ISSUE 2: Install Script Issues Spinx issue I don't care about now.
+I suspect that there is a Python `requirements.txt` or a `yaml` file that needs correcting. Since it was *just* `sphinx` I did not try to fix it.
+
+ERROR: sphinx 3.5.4 has requirement docutils<0.17,>=0.12, but you'll have docutils 0.18 which is incompatible.
+ERROR: sphinx-rtd-theme 0.5.2 has requirement docutils<0.17, but you'll have docutils 0.18 which is incompatible.
+ERROR: sphinx-tabs 3.2.0 has requirement docutils~=0.16.0, but you'll have docutils 0.18 which is incompatible.
+

@@ -1,0 +1,58 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2021 Robert Connaghan (burtrum)
+#
+# test_basic.sh
+#
+# THIS IS NOT A SCRIPT.  I use it as a copy-paste record of common commands.
+#
+# Test build all three SOCs
+# Zephyr's Espressif SOC support is a work in progress.
+#
+# zephyr.elf: ELF 32-bit LSB executable, Tensilica Xtensa, version 1 (SYSV), statically linked, with debug_info, not stripped
+# zephyr.elf: ELF 32-bit LSB executable, UCB RISC-V, version 1 (SYSV), statically linked, with debug_info, not stripped
+
+# install
+./install_zephyr_espressif.sh 2>&1 | tee -a ./console_log.txt
+cat ./console_log.txt | grep -i error
+cat ./console_log.txt | grep -i warn
+
+# First config-build, no compile, just config No zephyr.elf or zephyr.bin created.
+# Second build full compile build Both zephyr.elf or zephyr.bin over-written.
+#
+cd ~/zephyrproject/zephyr/samples/hello_world
+
+source z_esp32.sh
+west build --pristine always --target menuconfig --board esp32
+west build --pristine auto
+west flash --esp-device /dev/ttyUSB0
+west espressif -p /dev/ttyUSB0 monitor
+deactivate
+
+source z_esp32s2.sh
+west build --pristine always --target menuconfig --board esp32s2_saola
+west build --pristine auto
+west flash --esp-device /dev/ttyUSB0
+west espressif -p /dev/ttyUSB0 monitor
+deactivate
+
+// I HAVE NO RISCV BOARD so no flash no monitor
+source z_esp32c3.sh
+west build --pristine always --target menuconfig --board esp32c3_devkitm
+west build --pristine auto
+west flash --esp-device /dev/ttyUSB0
+west espressif -p /dev/ttyUSB0 monitor
+deactivate
+
+# Generate help files
+source z_esp32.sh
+west        --help > help_west.txt
+west build  --help > help_west_build.txt
+west config --help > help_west_config.txt
+west flash  --help > help_west_flash.txt
+west zephyr-export   --help > help_west_zephyr-export.txt
+deactivate
+
+
+# file zephyr.elf
+
+#EOF

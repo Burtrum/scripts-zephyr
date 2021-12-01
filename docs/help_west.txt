@@ -1,0 +1,47 @@
+usage: west [-h] [-z ZEPHYR_BASE] [-v] [-V] <command> ...
+
+wesy init
+west --help init > help_west_init.txt
+
+The Zephyr RTOS meta-tool.
+
+optional arguments:
+  -h, --help            get help for west or a command
+  -z ZEPHYR_BASE, --zephyr-base ZEPHYR_BASE
+                        Override the Zephyr base directory. The default is
+                        the manifest project with path "zephyr".
+  -v, --verbose         Display verbose output. May be given multiple times
+                        to increase verbosity.
+  -V, --version         print the program version and exit
+
+built-in commands for managing git repositories:
+  init:                 create a west workspace
+  update:               update projects described in west manifest
+  list:                 print information about projects
+  manifest:             manage the west manifest
+  diff:                 "git diff" for one or more projects
+  status:               "git status" for one or more projects
+  forall:               run a command in one or more local projects
+
+other built-in commands:
+  help:                 get help for west or a command
+  config:               get or set config file values
+  topdir:               print the top level directory of the workspace
+
+extension commands from project manifest (path: zephyr):
+  completion:           display shell completion scripts
+  boards:               display information about supported boards
+  build:                compile a Zephyr application
+  sign:                 sign a Zephyr binary for bootloader chain-loading
+  flash:                flash and run a binary on a board
+  debug:                flash and interactively debug a Zephyr application
+  debugserver:          connect to board and launch a debug server
+  attach:               interactively debug a board
+  zephyr-export:        export Zephyr installation as a CMake config
+                        package
+  spdx:                 create SPDX bill of materials
+
+extension commands from project hal_espressif (path: modules/hal/espressif):
+  espressif:            Espressif tools for west framework.
+
+Run "west help <command>" for help on each <command>.

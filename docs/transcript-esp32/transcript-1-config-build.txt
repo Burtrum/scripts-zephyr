@@ -1,0 +1,37 @@
+(.venv)$ deactivate
+$ source z_esp32.sh
+Now developing for esp32 SOC
+(.venv)$ west build --pristine always --target menuconfig --board esp32
+
+-- west build: making build dir /home/robertbc/zephyrproject/zephyr/samples/hello_world/build pristine
+-- west build: generating a build system
+Including boilerplate (Zephyr base): /home/robertbc/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: /home/robertbc/zephyrproject/zephyr/samples/hello_world
+-- Zephyr version: 2.7.99 (/home/robertbc/zephyrproject/zephyr), build: v2.7.99-1819-ga6f932a194c3
+-- Found Python3: /home/robertbc/zephyrproject/.venv/bin/python3 (found suitable exact version "3.8.10") found components: Interpreter
+-- Found west (found suitable version "0.12.0", minimum required is "0.7.1")
+-- Board: esp32
+-- Cache files will be written to: /home/robertbc/.cache/zephyr
+-- Found dtc: /usr/bin/dtc (found suitable version "1.5.0", minimum required is "1.4.6")
+-- Found BOARD.dts: /home/robertbc/zephyrproject/zephyr/boards/xtensa/esp32/esp32.dts
+-- Generated zephyr.dts: /home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/zephyr.dts
+-- Generated devicetree_unfixed.h: /home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/include/generated/devicetree_unfixed.h
+-- Generated device_extern.h: /home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/include/generated/device_extern.h
+-- Including generated dts.cmake file: /home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/dts.cmake
+Parsing /home/robertbc/zephyrproject/zephyr/Kconfig
+Loaded configuration '/home/robertbc/zephyrproject/zephyr/boards/xtensa/esp32/esp32_defconfig'
+Merged configuration '/home/robertbc/zephyrproject/zephyr/samples/hello_world/prj.conf'
+Configuration saved to '/home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/.config'
+Kconfig header saved to '/home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/include/generated/autoconf.h'
+-- Found toolchain: espressif (/home/robertbc/.espressif/tools/zephyr)
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/robertbc/.espressif/tools/zephyr/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/robertbc/zephyrproject/zephyr/samples/hello_world/build
+-- west build: running target menuconfig
+[0/1] cd /home/robertbc/zephyrproject/zephyr/samples/hello_world...config/menuconfig.py /home/robertbc/zephyrproject/zephyr/Kconfig
+Loaded configuration '/home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/.config'
+No changes to save (for '/home/robertbc/zephyrproject/zephyr/samples/hello_world/build/zephyr/.config')
